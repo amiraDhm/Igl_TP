@@ -117,6 +117,37 @@ public class VectorHelper {
             System.out.println(" "+v[i]);
         }
     }
+    
+    public void minmax (VectorHelper v)
+ {
+	int i=1;
+	int min=v.vector[0];
+	int max=v.vector[0];
+	while (i < v.taille)
+	  {
+		if ( v.vector[i]<= min ) { min = v.vector[i]; }
+		else { if ( v.vector[i]>max ) { max = v.vector[i]; }	 }
+		i=i+1;
+	  }
+        System.out.println("le Min est:"+min);
+        System.out.println("le Max est:"+max);
+	
+}
+    
+ public void multiplvector ( VectorHelper v )
+ {
+     int i;
+     int nb;
+     Scanner sc = new Scanner(System.in);
+     System.out.println("donnez le facteur de multiplication");
+     nb = sc.nextInt(); 
+     for ( i=0; i< this.taille; i++)
+         {
+            v.vector[i] = nb*v.vector[i] ;
+         }
+     
+ }	
+    
     }
 
         
