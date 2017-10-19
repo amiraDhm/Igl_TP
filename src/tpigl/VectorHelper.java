@@ -13,20 +13,23 @@ public class VectorHelper {
    
  private int[] vector ;  
  private int taille;
- public VectorHelper(int taille) 
+ public VectorHelper(int taille ,int[] vector) 
  { 
 
-    int ent;
+   // int ent;
     this.vector =new int[taille];
     this.taille=taille;
-    Scanner sc = new Scanner(System.in);
+    this.vector=vector;
+    /*Scanner sc = new Scanner(System.in);
     for (int i=0;i<taille;i++)
     {
       System.out.println("Donnez le "+i+" eme entier ");
                    ent = sc.nextInt();   
-                   this.vector[i]=ent;
+                   this.vector[i]=ent;*/
+    
     }
-    }
+
+   
     public int getTaille() 
     {
         return taille;
@@ -36,16 +39,7 @@ public class VectorHelper {
     {
         this.taille = taille;
     }
-
-    public Object getSc() {
-        return sc;
-    }
-
-    public void setSc(Object sc) {
-        this.sc = sc;
-    }
-    private Object sc;
-
+    
     public void setVector(int[] vector) 
     {
         this.vector=vector;
@@ -74,6 +68,7 @@ public class VectorHelper {
 			}
 			this.vector[j] = cle;
 		}
+                
 	}
     public int[] somVec(VectorHelper v) throws ExceptionVec 
 //ou bien l'entree c un tableau n'est pas objet
@@ -102,6 +97,7 @@ public class VectorHelper {
         this.vector[i] = this.vector[this.taille-i-1];
         this.vector[this.taille-i-1] = tmp;
     }
+    
 }
     public void affichVec() 
     { 
@@ -118,34 +114,34 @@ public class VectorHelper {
         }
     }
     
-    public void minmax (VectorHelper v)
+    public int [] minmax ()
  {
 	int i=1;
-	int min=v.vector[0];
-	int max=v.vector[0];
-	while (i < v.taille)
+	int min=this.vector[0];
+	int max=this.vector[0];
+	while (i < this.taille)
 	  {
-		if ( v.vector[i]<= min ) { min = v.vector[i]; }
-		else { if ( v.vector[i]>max ) { max = v.vector[i]; }	 }
+		if ( this.vector[i]<= min ) { min = this.vector[i]; }
+		else { if ( this.vector[i]>max ) { max = this.vector[i]; }	 }
 		i=i+1;
 	  }
-        System.out.println("le Min est:"+min);
-        System.out.println("le Max est:"+max);
+        int[] v={min,max};
+        return v;
+        
 	
 }
     
- public void multiplvector ( VectorHelper v )
+ public void multiplvector (int nb )
  {
      int i;
-     int nb;
-     Scanner sc = new Scanner(System.in);
-     System.out.println("donnez le facteur de multiplication");
-     nb = sc.nextInt(); 
+   
+    
      for ( i=0; i< this.taille; i++)
          {
-            v.vector[i] = nb*v.vector[i] ;
+            this.vector[i] = nb*this.vector[i] ;
          }
      
+  
  }	
     
     }

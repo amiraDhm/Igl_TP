@@ -14,11 +14,8 @@ public class TPIGL {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws ExceptionVec {
-        VectorHelper ve=new VectorHelper(5);
-        VectorHelper vec=new VectorHelper(5);
+    public static void main(String[] args)  {
         
-        ve.affich(ve.somVec(vec));
         
         // TODO code application logic here
     }
