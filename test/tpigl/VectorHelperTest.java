@@ -63,8 +63,8 @@ public class VectorHelperTest {
         System.out.println("somVec");
         int[] vec={4,1,7,5,9};
         VectorHelper instance = new VectorHelper(5,vec);
-        int[] vecc={3,9,2,5,4};
-        VectorHelper v = new VectorHelper(5,vecc);
+        int[] ve={3,9,2,5,4};
+        VectorHelper v = new VectorHelper(5,ve);
         
         int[] expResult = {7,10,9,10,13};
         int[] result = instance.somVec(v);
