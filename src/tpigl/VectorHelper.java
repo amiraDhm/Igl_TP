@@ -146,11 +146,11 @@ public class VectorHelper {
      *
      * @param v un tableau quelconque
      */
-    public void affich (int[] v) 
+    public void affichStand (int[] v) 
     {
         for (int i=0;i<v.length;i++)
         {
-            System.out.println(" "+v[i]);
+            System.out.println(" le"+i+" element"+v[i]);
         }
     }
     
