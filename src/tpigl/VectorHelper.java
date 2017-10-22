@@ -8,55 +8,75 @@ package tpigl;
 import java.util.Arrays;
 import java.util.Scanner;
 
-
+/**
+ *
+ * @author Dahmani Amira
+ *         Boudaoud Ikram
+ */
 public class VectorHelper {
    
  private int[] vector ;  
  private int taille;
- public VectorHelper(int taille ,int[] vector) 
- { 
+ 
+    /**
+     *
+     * @param taille la taille du vector
+     * @param vector le tableau dont les éléménts seront attribués à vector de VectorHelper
+     */
+    public VectorHelper(int taille ,int[] vector) 
+    { 
 
-   // int ent;
+   
     this.vector =new int[taille];
     this.taille=taille;
     this.vector=vector;
-    /*Scanner sc = new Scanner(System.in);
-    for (int i=0;i<taille;i++)
-    {
-      System.out.println("Donnez le "+i+" eme entier ");
-                   ent = sc.nextInt();   
-                   this.vector[i]=ent;*/
+  
     
     }
 
-   
+    /**
+     *
+     * @return donne la valeur de Taille
+     */
     public int getTaille() 
     {
         return taille;
     }
 
+    /**
+     *
+     * @param taille la valeur à attribuer à Taille
+     */
     public void setTaille(int taille) 
     {
         this.taille = taille;
     }
     
+    /**
+     *
+     * @param vector le tableau dont les éléments seront attribués à vector du VectorHelper
+     */
     public void setVector(int[] vector) 
     {
         this.vector=vector;
         
     }
 
+    /**
+     *
+     * @return un tableau cotenant les éléments du tableau vector
+     */
     public int[] getVector() 
     {
         return vector;
     }
 
-    
-    
-    
+    /**
+     *  trier les éléments du tableau vector
+     */
     public void triVec() 
     {
-        //Arrays.sort(this.vector);
+        
         int i, j, cle;
 		
 		for (i = 1; i < this.vector.length; i++) {
@@ -70,6 +90,13 @@ public class VectorHelper {
 		}
                 
 	}
+
+    /**
+     *
+     * @param v le tableau à sommer avec vector du VectorHelper
+     * @return un tableau contenant la somme du v et vector
+     * @throws ExceptionVec si les tailles du v et vector sont différentes
+     */
     public int[] somVec(VectorHelper v) throws ExceptionVec 
 //ou bien l'entree c un tableau n'est pas objet
     {
@@ -88,7 +115,11 @@ public class VectorHelper {
         }
      return vecSom;
     }
-    public void inversVec() /**permettre d'inverser le tableau*/ 
+
+    /**
+     * inverser les éléments du vector 
+     */
+    public void inversVec() 
     {
        
     int i , tmp;
@@ -99,6 +130,10 @@ public class VectorHelper {
     }
     
 }
+
+    /**
+     * afficher les éléments du vector
+     */
     public void affichVec() 
     { 
         for (int i=0;i<this.taille;i++)
@@ -106,6 +141,11 @@ public class VectorHelper {
             System.out.println(" "+this.vector[i]);
         }
     }
+
+    /**
+     *
+     * @param v un tableau quelconque
+     */
     public void affich (int[] v) 
     {
         for (int i=0;i<v.length;i++)
@@ -114,6 +154,10 @@ public class VectorHelper {
         }
     }
     
+    /**
+     *
+     * @return un tableau contenant le Min et le Max du vector
+     */
     public int [] minmax ()
  {
 	int i=1;
@@ -131,7 +175,11 @@ public class VectorHelper {
 	
 }
     
- public void multiplvector (int nb )
+    /**
+     *
+     * @param nb le facteur de multiplication des éléments du vector
+     */
+    public void multiplvector (int nb )
  {
      int i;
    

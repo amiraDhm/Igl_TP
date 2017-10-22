@@ -14,7 +14,8 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Amira
+ * @author Dahmani Amira
+ *         Boudaoud Ikram
  */
 public class VectorHelperTest {
     

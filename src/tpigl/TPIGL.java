@@ -7,7 +7,8 @@ package tpigl;
 
 /**
  *
- * @author Amira
+ * @author Dahmani Amira
+ *         Boudaoud Ikram
  */
 public class TPIGL {
 
