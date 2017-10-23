@@ -20,8 +20,8 @@ public class VectorHelper {
  
     /**
      *
-     * @param taille la taille du vector
-     * @param vector le tableau dont les éléménts seront attribués à vector de VectorHelper
+     * @param taille la taille du vector ex: taille=5;
+     * @param vector le tableau dont les éléménts seront attribués à vector de VectorHelper ex:vector={2,3,1,6,4}
      */
     public VectorHelper(int taille ,int[] vector) 
     { 
@@ -36,7 +36,7 @@ public class VectorHelper {
 
     /**
      *
-     * @return donne la valeur de Taille
+     * @return donne la valeur de Taille 
      */
     public int getTaille() 
     {
@@ -72,7 +72,7 @@ public class VectorHelper {
     }
 
     /**
-     *  trier les éléments du tableau vector
+     *  trier les éléments du tableau vector ex : vector ={3,1,8,2,4} apres le tri on aura vector={1,2,3,4,8}
      */
     public void triVec() 
     {
@@ -95,7 +95,9 @@ public class VectorHelper {
      *
      * @param v le tableau à sommer avec vector du VectorHelper
      * @return un tableau contenant la somme du v et vector
+     * ex:vector ={3,1,8,2,4} et le parametre v={4,8,2,9,1} apres la somme on aura vector={7,9,10,11,5}
      * @throws ExceptionVec si les tailles du v et vector sont différentes
+     *ex : vector={3,1,8,2,4} et v={4,8,2,9,1,3} une exception sera levée car sont de tailles deffirentes 
      */
     public int[] somVec(VectorHelper v) throws ExceptionVec 
 //ou bien l'entree c un tableau n'est pas objet
@@ -117,7 +119,7 @@ public class VectorHelper {
     }
 
     /**
-     * inverser les éléments du vector 
+     * inverser les éléments du vector ex : vector ={3,1,8,2,4} apres inversVec on aura vector ={4,2,8,1,3}
      */
     public void inversVec() 
     {
@@ -156,7 +158,7 @@ public class VectorHelper {
     
     /**
      *
-     * @return un tableau contenant le Min et le Max du vector
+     * @return un tableau contenant le Min et le Max du vector ex: vector ={3,1,8,2,4} apres minmax on aura tableau du min et max dans le vecteur v={1,8}
      */
     public int [] minmax ()
  {
@@ -177,7 +179,7 @@ public class VectorHelper {
     
     /**
      *
-     * @param nb le facteur de multiplication des éléments du vector
+     * @param nb le facteur de multiplication des éléments du vector ex: vector ={3,1,8,2,4} avec nb=3 on aura vector={9,3,24,6,12}
      */
     public void multiplvector (int nb )
  {
